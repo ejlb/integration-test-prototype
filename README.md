@@ -1,5 +1,5 @@
 # Integration test prototype
-Prototype for integration test using two postgres DBs via docker
+Prototype for python integration test using two postgres DBs via docker
 
 ### system setup
 * install postgres
