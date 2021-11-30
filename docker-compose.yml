@@ -1,0 +1,24 @@
+version: '3'
+services:
+  master:
+    image: postgres:12.9
+    environment:
+     POSTGRES_ROOT_PASSWORD: master
+     POSTGRES_USER: master
+     POSTGRES_HOST: localhost
+     POSTGRES_PORT: 5432
+     POSTGRES_PASSWORD: master
+     POSTGRES_DATABASE: master
+    ports:
+      - "12345:5432"
+  slave:
+    image: postgres:12.9
+    environment:
+     POSTGRES_ROOT_PASSWORD: slave
+     POSTGRES_USER: slave
+     POSTGRES_HOST: localhost
+     POSTGRES_PORT: 5432
+     POSTGRES_PASSWORD: slave
+     POSTGRES_DATABASE: slave
+    ports:
+      - "12346:5432"
